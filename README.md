@@ -34,6 +34,7 @@ I've used Angular for User Management using Firebase on Google App Engine. It ta
 Once the user has logged in, the MovieService.java makes a call to the TMDb API and gets latest top five popular movies currently running in Australia using the two API calls given below:
 
 https://api.themoviedb.org/3/genre/movie/list?api_key=*****&region=AU
+
 https://api.themoviedb.org/3/movie/popular?api_key=*******&region=AU
 
 from which I parse the top five movies and send a json response back to Angular app in the following format
