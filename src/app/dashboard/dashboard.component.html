@@ -1,0 +1,11 @@
+<div *ngIf="ngAuthService.userState as user" class="m-2">
+  <h2>Welcome {{ user.email }}</h2>
+  <mat-card style="display: inline-grid;" *ngFor="let tile of tiles" class="m-2">
+    <mat-card-title-group>
+      <mat-card-title>{{ tile.title }}</mat-card-title>
+    </mat-card-title-group>
+    <img mat-card-image src="{{tile.poster_url}}">
+    <mat-card-footer><span class="m-1" *ngFor="let genre of tile.genre">{{genre}}</span></mat-card-footer>
+  </mat-card>
+  <div class="mt-2"><a class="btn btn-block btn-primary" (click)="ngAuthService.SignOut()">Sign Out</a></div>
+</div>
